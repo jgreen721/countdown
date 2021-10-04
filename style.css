@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  font-family: "Red Hat Text", sans-serif;
+  text-transform: uppercase;
+}
+
+.title {
+  color: white;
+  letter-spacing: 5px;
+}
+
+.app {
+  height: 80%;
+  top: 10%;
+  position: relative;
+  background: rgb(34, 33, 33);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-image: url("./images/bg-stars.svg");
+  overflow: hidden;
+}
+
+.hills-img {
+  top: 125px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.evenly {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.lightgray {
+  color: hsl(237, 18%, 59%);
+  font-size: 10px;
+}
+
+.text-card {
+  width: 65%;
+  /* border: 2px solid white; */
+  height: 225px;
+  position: relative;
+  top: 35px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 600px;
+  min-width: 450px;
+}
+
+.attribution {
+  color: white;
+  z-index: 1;
+  position: relative;
+  position: relative;
+  top: 35px;
+}
+
+.nav-links {
+  z-index: 1;
+  position: relative;
+  width: 20%;
+  top: -5%;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-icon {
+  height: 15px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.nav-icon:hover {
+  color: hsl(345, 95%, 68%);
+}
+
+.main-card {
+  width: 85%;
+  /* border: 1px solid red; */
+  height: 85px;
+  padding: 1em;
+}
+
+.card {
+  height: 100%;
+  border-radius: 5%;
+  /* border: 1px solid white; */
+  width: 100px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.counter-card {
+  height: 80%;
+  width: 100%;
+  /* border: 2px solid orange; */
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.time {
+  position: relative;
+  z-index: 1;
+  /* top: 15%; */
+  font-size: 45px;
+}
+
+.overlay-top,
+.overlay-bottom {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  /* border: 1px solid green; */
+  top: 0;
+  left: 0;
+  background: rgb(54, 52, 52);
+  border-radius: 5%;
+}
+
+.overlay-top {
+  color: white;
+  overflow: hidden;
+  /* animation: flipcard 2s forwards; */
+  z-index: 1;
+}
+
+/* .overlay-flip {
+  animation: flipcard 1.5s infinite;
+} */
+
+@keyframes flipcard {
+  100% {
+    transform: translateY(40px) rotateX(-180deg);
+  }
+}
+
+.time-top {
+  top: 11px;
+  color: hsl(345, 95%, 58%);
+}
+
+.overlay-bottom {
+  top: 50%;
+  background: hsl(233, 12%, 30%);
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.time-bottom {
+  top: -28px;
+  color: hsl(345, 95%, 68%);
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+<div class="text-card">
+
+  <h4 class="title">We're launching soon</h4>
+
+  <div class="main-card flex evenly">
+    
+    <div class="card">
+      <div class="counter-card">
+        <div class="overlay-top">
+          <h1 class="time time-top days">3</h1>
+        </div>
+        <div class="overlay-bottom">
+          <h1 class="time time-bottom days">3</h1>
+       </div>
+      </div>
+      <p class="lightgray">Days</p>
+    </div>
+  
+  
+  
+  <div class="card">
+    <div class="counter-card">
+      <div class="overlay-top">
+        <h1 class="time time-top hours">8</h1>
+      </div>
+      <div class="overlay-bottom">
+        <h1 class="time time-bottom hours">8</h1>
+     </div>
+    </div>
+    <p class="lightgray">Hours</p>
+  </div>
+
+<div class="card">
+  <div class="counter-card">
+    <div class="overlay-top">
+      <h1 class="time time-top minutes">23</h1>
+    </div>
+    <div class="overlay-bottom">
+      <h1 class="time time-bottom minutes">23</h1>
+   </div>
+  </div>
+  <p class="lightgray">Minutes</p>
+</div>
+
+  <div class="card">
+      <div class="counter-card">
+        <div class="overlay-top">
+          <h1 class="time time-top seconds overlay-flip">5</h1>
+        </div>
+        <div class="overlay-bottom">
+          <h1 class="time time-bottom seconds">5</h1>
+       </div>
+      </div>
+      <p class="lightgray">Seconds</p>
+    </div>
+  </div>
+  
+</div>
+
+
+  
+
+
+  <img class="hills-img" src="./images/pattern-hills.svg" alt="hills-img">
+
+
+  <ul class="nav-links flex evenly">
+    <li class="nav-item">
+      <i class='fab fa-facebook nav-icon'></i>
+    </li>
+    <li class="nav-item">
+      <i class='fab fa-pinterest nav-icon'></i>
+   </li>
+    <li class="nav-item">
+      <i class='fab fa-instagram nav-icon'></i>
+    </li>
+  </ul>
+  
+
+</div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+
+  <script>
+    var secondsEl = document.querySelectorAll(".seconds")
+    var daysEl = document.querySelectorAll(".days")
+    var hoursEl = document.querySelectorAll(".hours")
+    var minutesEl = document.querySelectorAll(".minutes")
+
+    let days = daysEl[0].textContent;
+    let seconds = secondsEl[0].textContent;
+    let hours = hoursEl[0].textContent;
+    let minutes = minutesEl[0].textContent;
+
+
+    function runTimer(){
+
+      let secondsInt = setInterval(()=>{
+        if(seconds < 10 ){
+          secondsEl.forEach(el=>{
+          el.innerHTML = "0" + seconds
+        })
+      }
+        else{
+          secondsEl.forEach(el=>{
+          el.innerHTML = seconds
+        })
+      }
+        seconds--;
+    
+        
+
+        if(seconds === -1){
+          seconds = 59;
+          minutes--;
+          minutesEl.forEach(el=>{
+          el.innerHTML = minutes
+        })
+        }
+        if(minutes === -1){
+          minutes = 59
+          minutesEl.forEach(el=>{
+          el.innerHTML = minutes
+        })
+          hours--;
+          hours[0].innerHTML = hours;
+          hours[1].innerHTML = hours;
+        }
+      },1000)
+    }
+
+
+    // runTimer()
+
+
+    console.log("one")
+    setTimeout(()=>console.log("wowzer!"),0)
+    console.log("two")
+    console.log("three")
+    console.log("four")
+    console.log("five")
+    console.log("six")
+  </script>
+</body>
+</html>
