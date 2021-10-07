@@ -26,10 +26,10 @@
     <div class="card">
       <div class="counter-card">
         <div class="overlay-top">
-          <h1 class="time time-top days">3</h1>
+          <h1 class="time time-top days">03</h1>
         </div>
         <div class="overlay-bottom">
-          <h1 class="time time-bottom days">3</h1>
+          <h1 class="time time-bottom days">03</h1>
        </div>
       </div>
       <p class="lightgray">Days</p>
@@ -40,10 +40,10 @@
   <div class="card">
     <div class="counter-card">
       <div class="overlay-top">
-        <h1 class="time time-top hours">8</h1>
+        <h1 class="time time-top hours">08</h1>
       </div>
       <div class="overlay-bottom">
-        <h1 class="time time-bottom hours">8</h1>
+        <h1 class="time time-bottom hours">08</h1>
      </div>
     </div>
     <p class="lightgray">Hours</p>
@@ -64,10 +64,10 @@
   <div class="card">
       <div class="counter-card">
         <div class="overlay-top">
-          <h1 class="time time-top seconds overlay-flip">5</h1>
+          <h1 class="time time-top seconds overlay-flip">05</h1>
         </div>
         <div class="overlay-bottom">
-          <h1 class="time time-bottom seconds">5</h1>
+          <h1 class="time time-bottom seconds">05</h1>
        </div>
       </div>
       <p class="lightgray">Seconds</p>
@@ -110,10 +110,13 @@
     var daysEl = document.querySelectorAll(".days")
     var hoursEl = document.querySelectorAll(".hours")
     var minutesEl = document.querySelectorAll(".minutes")
-
-    let days = daysEl[0].textContent;
-    let seconds = secondsEl[0].textContent;
-    let hours = hoursEl[0].textContent;
+    let days =Math.random() * 20 + 10 | 0
+    let hours =Math.random() * 13 + 10 | 0
+     daysEl[0].innerHTML =days
+     daysEl[1].innerHTML =days
+    let seconds = 5
+     hoursEl[0].innerHTML = hours
+     hoursEl[1].innerHTML = hours
     let minutes = minutesEl[0].textContent;
 
 
@@ -157,13 +160,7 @@
     runTimer()
 
 
-    console.log("one")
-    setTimeout(()=>console.log("wowzer!"),0)
-    console.log("two")
-    console.log("three")
-    console.log("four")
-    console.log("five")
-    console.log("six")
+
   </script>
 </body>
 </html>

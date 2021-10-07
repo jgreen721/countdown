@@ -171,3 +171,10 @@ body {
   top: -28px;
   color: hsl(345, 95%, 68%);
 }
+
+@media screen and (max-width: 500px) {
+  .hills-img {
+    width: 600px;
+    height: 125px;
+  }
+}
